@@ -8,7 +8,7 @@
       <p>Get it done today</p>
       
         <!-- add HTML code here -->
-         <input type="text" id="add_input" style="margin-right: 5px;"><button onclick="add_to_list()">Enter</button>
+         <input type="text" id="userinput" style="margin-right: 5px;"><button onclick="add_to_list()">Enter</button>
 
       <ul>
          <li>Notebook</li>
@@ -24,7 +24,7 @@
         // add code here
          function add_to_list(){
             var list_item = document.createElement("li")
-            var text = document.createTextNode(document.getElementById("add_input").value + " ")
+            var text = document.createTextNode(document.getElementById("userinput").value + " ")
             list_item.appendChild(text)
             
             // var delete_btn = document.createElement("button")
@@ -38,7 +38,7 @@
             var unordered_list = document.getElementsByTagName("ul")[0]
             unordered_list.appendChild(list_item)
             
-            document.getElementById("add_input").value = ""
+            document.getElementById("userinput").value = ""
          }
 
       </script>
