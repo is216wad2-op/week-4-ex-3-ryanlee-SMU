@@ -8,6 +8,7 @@
       <p>Get it done today</p>
       
         <!-- add HTML code here -->
+         <input type="text" id="add_input" style="margin-right: 5px;"><button onclick="add_to_list()">Enter</button>
 
       <ul>
          <li>Notebook</li>
@@ -21,6 +22,24 @@
       <script>
       
         // add code here
+         function add_to_list(){
+            var list_item = document.createElement("li")
+            var text = document.createTextNode(document.getElementById("add_input").value + " ")
+            list_item.appendChild(text)
+            
+            // var delete_btn = document.createElement("button")
+            // delete_btn.onclick = function () {
+            //    this.parentNode.remove()
+            // }
+            // var btn_txt = document.createTextNode("delete")
+            // delete_btn.appendChild(btn_txt)
+            // list_item.appendChild(delete_btn)
+            
+            var unordered_list = document.getElementsByTagName("ul")[0]
+            unordered_list.appendChild(list_item)
+            
+            document.getElementById("add_input").value = ""
+         }
 
       </script>
  
